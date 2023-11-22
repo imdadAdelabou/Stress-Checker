@@ -3,7 +3,6 @@ import { Question } from "./types";
 export const apiUrl = "https://api.openai.com/v1/chat/completions";
 
 export const apiOpenAPIKEY = import.meta.env.VITE_REACT_APP_OPEN_AI;
-console.log(apiOpenAPIKEY);
 
 export const sampleQuestions: Question[] = [
   new Question(
