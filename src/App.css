@@ -1,0 +1,44 @@
+
+
+p {
+  color: #E2E4F3;
+}
+
+.container {
+  background-color: #343964;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.indicator__question_section {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.question {
+  color: white;
+  font-weight: 400;
+  color: #E2E4F3;
+  text-align: center;
+  margin: 40px 20px 40px 20px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.spacer {
+  margin-bottom: 40px;
+}
+
+@media screen  and (min-width: 992px) {
+  .question {
+    width: 80%;
+  }
+
+  .container {
+    width: 50%;
+  }
+}
