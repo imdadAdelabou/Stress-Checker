@@ -15,7 +15,7 @@ import Loading from "./components/Loading";
 function App() {
   const [result, setResult] = React.useState<string | null>(null);
   const [viewState, setViewState] = React.useState<ViewState>(
-    ViewState.LOADING
+    ViewState.INITIAL
   );
   const [userResponse, setUserResponse] = React.useState<UserResponse>({});
   const [suggestionClickedIndex, setSuggestionClickedIndex] = React.useState<
