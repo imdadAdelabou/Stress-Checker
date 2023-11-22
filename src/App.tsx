@@ -49,25 +49,29 @@ function App() {
     );
 
     setViewState(() => ViewState.LOADING);
-    fetch(apiUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiOpenAPIKEY}`,
-      },
-      body: JSON.stringify({
-        model: "gpt-3.5-turbo",
-        messages: [{ role: "user", content: prompt }],
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setViewState(() => ViewState.RESPONSE);
-        setResult(() => data.choices[0].message.content as string);
+    try {
+      fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiOpenAPIKEY}`,
+        },
+        body: JSON.stringify({
+          model: "gpt-3.5-turbo",
+          messages: [{ role: "user", content: prompt }],
+        }),
       })
-      .catch(() => {
-        setViewState(() => ViewState.INITIAL);
-      });
+        .then(
+          (response) => response.json(),
+          () => setViewState(() => ViewState.INITIAL)
+        )
+        .then((data) => {
+          setViewState(() => ViewState.RESPONSE);
+          setResult(() => data.choices[0].message.content as string);
+        });
+    } catch (error) {
+      setViewState(() => ViewState.INITIAL);
+    }
   };
 
   const handleClickOnSuggestion = (suggestion: string, index: number) => {

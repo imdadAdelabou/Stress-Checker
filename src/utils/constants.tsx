@@ -3,6 +3,7 @@ import { Question } from "./types";
 export const apiUrl = "https://api.openai.com/v1/chat/completions";
 
 export const apiOpenAPIKEY = import.meta.env.VITE_REACT_APP_OPEN_AI;
+console.log(apiOpenAPIKEY);
 
 export const sampleQuestions: Question[] = [
   new Question(
@@ -50,4 +51,5 @@ export const sampleQuestions: Question[] = [
 
 export const beginPrompt =
   "Cher ChatGPT, j'ai répondu à un questionnaire de 06 questions afin de connaitre mon niveau de stress. Peux tu me générer à base des questions et de mes réponses mon niveau de stress et me fournit des suggestion afin de l'améliorer. Voici les questions/réponses: ";
-export const endPrompt = "Peux tu formatter le resultat en incluant uniquant des balises p, ul, li au bon endroit";
+export const endPrompt =
+  "Peux tu formatter le resultat en incluant uniquant des balises p, ul, li au bon endroit";
