@@ -4,7 +4,7 @@ import LinearProgressBar from "./LinearProgressBar";
 
 const Loading: React.FC = () => {
   return (
-    <div>
+    <div className={style["container_load"]}>
       <div className="center">
         <img src={loadingImage} className={`${style["loading_picture"]}`} />
       </div>
