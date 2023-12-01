@@ -11,7 +11,6 @@ https://stress-checker.vercel.app/
 </ul>
 
 ## Demos
-| Header 1 | Header 2 | 
 |----------|----------|
 | <img src="/demos/screen1.png" height="500px" /> | <img src="/demos/screen2.png" height="500px" /> |
 | <img src="/demos/screen3.png" height="500px" />| <img src="/demos/screen4.png" height="500px" /> |
